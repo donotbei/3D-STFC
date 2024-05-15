@@ -8,13 +8,13 @@ from torchvision import transforms
 
 
 #获取训练数据集
-file_name_train = os.listdir(r'/Users/dd/PycharmProjects/ADHD/train')
+file_name_train = os.listdir(r'/your/data/path/train')
 train_name = []
 file_train_match = []
 for i in range(0,767):
     file_train_match.append(file_name_train[i])
 
-y_train = pd.read_csv(r'/Users/dd/PycharmProjects/ADHD/以及/train_767.CSV')
+y_train = pd.read_csv(r'/your/data/path/train_767.CSV')
 y_train_1 = y_train[y_train['Site'].isin([1, 3, 4, 5, 6])]
 length_1 = len(y_train_1)
 y_train_1 = y_train_1.reset_index()
@@ -41,7 +41,7 @@ for j in range(0, 767):
 path_train = []
 img_arr1 = np.zeros((length_1, 121, 145, 121))
 for i in range(0, length_1):
-    path_train.append(os.path.join(r'/Users/dd/PycharmProjects/ADHD/train', train_name[i]))
+    path_train.append(os.path.join(r'/your/data/path/train', train_name[i]))
     smooth_anat_img = image.smooth_img(path_train[i],fwhm=3)
     img_arr1[i] = smooth_anat_img.get_fdata()
 
@@ -72,14 +72,14 @@ def data_p(p, q):
 
 
 #获取测试数据集
-file_name_test = os.listdir(r'/Users/dd/PycharmProjects/ADHD/test')
+file_name_test = os.listdir(r'/your/data/path/test')
 file_name_test.remove('.DS_Store')
 test_name = []
 file_test_match = []
 for i in range(0, 171):
     file_test_match.append(file_name_test[i])
 
-y_test = pd.read_csv(r'/Users/dd/PycharmProjects/ADHD/test.file/allSubs_testSet_phenotypic_dx.csv')
+y_test = pd.read_csv(r'/your/data/path/test.file/allSubs_testSet_phenotypic_dx.csv')
 y_test_1 = y_test[y_test['Site'].isin([1, 3, 4, 5, 6])]
 length_2 = len(y_test_1)
 y_test_1 = y_test_1.reset_index()
@@ -105,7 +105,7 @@ for j in range(0, 171):
 path_test = []
 img_arr2 = np.zeros((length_2, 121, 145, 121))
 for i in range(0, length_2):
-    path_test.append(os.path.join(r'/Users/dd/PycharmProjects/ADHD/test', test_name[i]))
+    path_test.append(os.path.join(r'/your/data/path/test', test_name[i]))
     smooth_anat_img = image.smooth_img(path_test[i], fwhm=3)
     img_arr2[i] = smooth_anat_img.get_fdata()
 

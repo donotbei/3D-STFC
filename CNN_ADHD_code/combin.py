@@ -6,17 +6,17 @@ import sub_dataset
 
 
 '''
-o_1 = pd.read_csv('/Users/dd/PycharmProjects/ADHD/NI/result/opt_Y1.csv', sep=' ', names=range(121)).astype(int)
-o_2 = pd.read_csv('/Users/dd/PycharmProjects/ADHD/NI/result/opt_Y2.csv', sep=' ', names=range(145)).astype(int)
-o_3 = pd.read_csv('/Users/dd/PycharmProjects/ADHD/NI/result/opt_Y3.csv', sep=' ', names=range(121)).astype(int)
-o_1.to_csv('/Users/dd/PycharmProjects/ADHD/NI/opt_Y1.csv', index=False)
-o_2.to_csv('/Users/dd/PycharmProjects/ADHD/NI/opt_Y2.csv', index=False)
-o_3.to_csv('/Users/dd/PycharmProjects/ADHD/NI/opt_Y3.csv', index=False)
+o_1 = pd.read_csv('/your/save_data/path/opt_Y1.csv', sep=' ', names=range(121)).astype(int)
+o_2 = pd.read_csv('/your/save_data/path/opt_Y2.csv', sep=' ', names=range(145)).astype(int)
+o_3 = pd.read_csv('/your/save_data/path/opt_Y3.csv', sep=' ', names=range(121)).astype(int)
+o_1.to_csv('/your/save_data/path/opt_Y1.csv', index=False)
+o_2.to_csv('/your/save_data/path/opt_Y2.csv', index=False)
+o_3.to_csv('/your/save_data/path/opt_Y3.csv', index=False)
 '''
 
-t_Y1 = np.array(pd.read_csv('/Users/dd/PycharmProjects/ADHD/NI/opt_Y1.csv'))
-t_Y2 = np.array(pd.read_csv('/Users/dd/PycharmProjects/ADHD/NI/opt_Y2.csv'))
-t_Y3 = np.array(pd.read_csv('/Users/dd/PycharmProjects/ADHD/NI/opt_Y3.csv'))
+t_Y1 = np.array(pd.read_csv('/your/save_data/path/opt_Y1.csv'))
+t_Y2 = np.array(pd.read_csv('/your/save_data/path/opt_Y2.csv'))
+t_Y3 = np.array(pd.read_csv('/your/save_data/path/opt_Y3.csv'))
 
 
 '''
