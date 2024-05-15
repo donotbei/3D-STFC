@@ -10,19 +10,19 @@ from nilearn import image
 
 #import x
 #get file name
-file_name = os.listdir(r'/Users/dd/PycharmProjects/ADHD/train')
+file_name = os.listdir(r'your/data/path/train')
 #generate file path
 path = []
 img_arr1 = np.zeros((767,121,145,121))
 for i in range(0,767):
-    path.append(os.path.join(r'/Users/dd/PycharmProjects/ADHD/train',file_name[i]))
+    path.append(os.path.join(r'/your/data/path/train',file_name[i]))
     smooth_anat_img = image.smooth_img(path[i],fwhm=3)   #read image path
     img_arr1[i] = smooth_anat_img.get_fdata()   #get image data
 
 
 #import y:
 #read csv file
-y_data = pd.read_csv(r'/Users/dd/PycharmProjects/ADHD/以及/train_767.CSV')
+y_data = pd.read_csv(r'/your/data/path/train_767.CSV')
 #get match name for data
 file_name_match = []
 for i in range(0,767):
