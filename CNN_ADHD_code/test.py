@@ -4,13 +4,13 @@ import os
 from nilearn import image
 #import x
 #get file name
-file_name = os.listdir(r'/Users/dd/PycharmProjects/ADHD/test')
+file_name = os.listdir(r'/your/data/path/test')
 file_name.remove('.DS_Store')
 #generate file path
 path = []
 img_arr2 = np.zeros((171, 121, 145, 121))
 for i in range(0, 171):
-    path.append(os.path.join(r'/Users/dd/PycharmProjects/ADHD/test', file_name[i]))
+    path.append(os.path.join(r'/your/data/path/test', file_name[i]))
     smooth_anat_img = image.smooth_img(path[i], fwhm=3)   #read image path
     img_arr2[i] = smooth_anat_img.get_fdata()   #get image data
 
