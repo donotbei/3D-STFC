@@ -17,7 +17,7 @@ for i in range(0, 171):
 
 #import y:
 #read tsv file
-y_data = pd.read_csv(r'/Users/dd/PycharmProjects/ADHD/test.file/allSubs_testSet_phenotypic_dx.csv')
+y_data = pd.read_csv(r'/your/data/path/test.file/allSubs_testSet_phenotypic_dx.csv')
 #get match name for data
 file_name_match = []
 for i in range(0, 171):
