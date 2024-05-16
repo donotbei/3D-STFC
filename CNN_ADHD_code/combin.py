@@ -1,3 +1,4 @@
+# 3D TDA for ADHD classification
 import numpy as np
 import pandas as pd
 from sklearn.metrics import confusion_matrix,  recall_score
@@ -76,7 +77,7 @@ print(confusion_matrix(test.y2, t_pre))
 print(recall_score(test.y2, t_pre))
 '''
 
-
+# 3D decision matrix
 def Decision_3d(Y1, Y2, Y3, length_2):
     decision_matrix = np.zeros([length_2, 121, 145, 121])
     matrix_1 = np.zeros([121, 145, 121])
@@ -103,6 +104,7 @@ def Decision_3d(Y1, Y2, Y3, length_2):
 
     return decision_matrix
 
+# Classification by 3D decision matrix and Topological feature
 def Judge(X, k=3):
     count = 0
     for i in range(122 - k):

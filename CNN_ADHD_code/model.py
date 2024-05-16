@@ -226,14 +226,11 @@ def train_model(net_, train_iter_, test_iter_, num_epochs_, lr_, weight_decay_, 
     net_.load_state_dict(torch.load('checkpoint.pt'))
     return net_
 
-
-# train_iter = data.get_train_iter(1,25,767,8)
-# test_iter = data.get_test_iter(1,25,171,8)
-
+# use resnet18 model by change the first layer and the last layer
 resnet18 = models.resnet18()
 resnet18.fc = nn.Sequential(nn.Dropout(0.1), nn.Linear(512, 2))
 resnet18.conv1 = nn.Conv2d(1, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
-
+# use resnet34 model by change the first layer and the last layer
 resnet34 = models.resnet34()
 resnet34.conv1 = nn.Conv2d(1, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
 resnet34.fc = nn.Sequential(nn.Dropout(0.1), nn.Linear(512, 2))
