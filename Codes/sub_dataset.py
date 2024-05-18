@@ -79,7 +79,7 @@ file_test_match = []
 for i in range(0, 171):
     file_test_match.append(file_name_test[i])
 
-y_test = pd.read_csv(r'/your/data/path/test.file/allSubs_testSet_phenotypic_dx.csv')
+y_test = pd.read_csv(r'/your/data/path/testfile/allSubs_testSet_phenotypic_dx.csv')
 y_test_1 = y_test[y_test['Site'].isin([1, 3, 4, 5, 6])]
 length_2 = len(y_test_1)
 y_test_1 = y_test_1.reset_index()
